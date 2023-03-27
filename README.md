@@ -11,6 +11,7 @@ Once you have Django installed, clone this repository and navigate to the projec
 
 
 git clone https://github.com/nihaanth/To-Do-app-django
+
 cd todoapp
 
 Then, run the Django development server:
