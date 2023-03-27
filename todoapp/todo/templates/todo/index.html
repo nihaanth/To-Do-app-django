@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>To-Do List</h1>
+  <ul>
+  {% for task in tasks %}
+    <li {% if task.completed %} class="completed"{% endif %}>
+      <a href="{% url 'complete_task' task.id %}">[Complete]</a>
+      {{ task.title }}
+      <a href="{% url 'delete_task' task.id %}">[Delete]</a>
+    </li>
+  {% empty %}
+    <li>No tasks yet.</li>
+  {% endfor %}
+  </ul>
+  <a href="{% url 'add_task' %}">Add Task</a>
+{% endblock %}
